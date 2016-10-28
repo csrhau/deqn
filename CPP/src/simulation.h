@@ -38,15 +38,14 @@ class Simulation final {
 
 
 namespace simulation_helpers {
-
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
-  inline unsigned int Index2d(unsigned int i,
-                              unsigned int j,
-                              unsigned int rows,
-                              unsigned int cols) {
+  inline unsigned int Index2d(int i,
+                              int j,
+                              int rows,
+                              int cols) {
     i = MAX(0, MIN(rows-1, i));
     j = MAX(0, MIN(cols-1, j));
     return i * cols + j;
   }
-}; // namespace simulation_helpers
+} // namespace simulation_helpers
